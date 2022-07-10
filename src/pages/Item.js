@@ -21,7 +21,7 @@ export default function Item(props) {
         <>
             {item ? <div className="cat img">
                 <h4>{item.title}</h4>
-                <img src={item.image} />
+                <img src={item.image} alt="" />
                 <h5>{item.price}</h5>
             </div>
 
