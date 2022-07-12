@@ -18,16 +18,21 @@ export default function Layout({ setIsLogged }) {
 
 
     useEffect(() => {
-        async function getUserDetails() {
-            const res = await fetch("http://localhost:3001/api/users/my-details", {
-                method: "GET",
-                headers: { Authorization: `bearer ${localStorage.atLogin}` },
+        async function getMyDetails() {
+            const res = await fetch('http://localhost:3001/api/users/my-details', {
+                method: 'GET',
+                headers: { Authorization: `bearer ${localStorage.atLogin}` }
             });
-            const data = await res.json()
+            const data = await res.json();
             setUser(data)
         }
-        getUserDetails()
+        getMyDetails()
     }, [])
+
+
+
+
+
 
 
 

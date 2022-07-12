@@ -8,6 +8,7 @@ function App() {
   const [isLogged, setIsLogged] = useState(localStorage.atLogin)
   return (
     <div className="App">
+
       {isLogged ?
         <Layout setIsLogged={setIsLogged} /> :
         <Login setIsLogged={setIsLogged} />}

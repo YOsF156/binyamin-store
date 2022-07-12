@@ -8,17 +8,12 @@ import "../index.css"
 function Login({ setIsLogged }) {
 
 
-
-
-
-
-    const navigate = useNavigate()
-
     const [err, setErr] = useState("")
     const handleSubmit = async (e) => {
 
         e.preventDefault();
         const formData = new FormData(e.target);
+        console.dir(e.target)
 
         const reqData = JSON.stringify({ email: formData.get("username"), password: formData.get("password") });
         try {
@@ -55,7 +50,7 @@ function Login({ setIsLogged }) {
                 <input id="username" type="email" placeholder="enter username here" className="username-input login-form-input" name="username" required />
 
                 <label htmlFor="password">password</label>
-                <input type="password" placeholder="enter password here" className="password-input login-form-input" name="password" required />
+                <input id="password" type="password" placeholder="enter password here" className="password-input login-form-input" name="password" required />
 
                 <input type="submit" className="btn submit-btn" value="login" />
             </form>

@@ -14,6 +14,6 @@ export default function Categories() {
     if (!categories.length) return 'Loading...'
 
     return <div className="catList">
-        {categories.map(c => <LinkItem where={"items/" + c}> <div className="cat">{c}</div> </LinkItem>)}
+        {categories.map(c => <LinkItem where={"/items/" + c}> <div className="cat">{c}</div> </LinkItem>)}
     </div>
 }
